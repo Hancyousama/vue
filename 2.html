@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<head>
+    <title>ceshi </title>
+    <style>
+        .picall {
+            height: 502px;
+            width: 895px;
+            position: absolute;
+        }
+        
+        .pic {
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        
+        #pic1 {
+            background-image: url(./image/1.jpg);
+            z-index: 2;
+        }
+        
+        #pic2 {
+            background-image: url(./image/2.jpg);
+            z-index: 1;
+        }
+        
+        #pic3 {
+            background-image: url(./image/3.jpg);
+            z-index: 0;
+        }
+        
+        .buttomall {
+            width: 300px;
+            height: 30px;
+            z-index: 99;
+            position: absolute;
+            left: 30%;
+            bottom: 50px;
+        }
+        
+        .button {
+            width: 30px;
+            height: 100%;
+            background-color: white;
+            opacity: 0.6;
+            margin: 0 20px;
+            z-index: 99;
+            float: left;
+            text-align: center;
+        }
+        
+        .button:hover {
+            cursor: pointer;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="picall">
+        <div class="pic" id="pic1"></div>
+        <div class="pic" id="pic2"></div>
+        <div class="pic" id="pic3"></div>
+
+        <div class="buttomall">
+            <div class="button" id="no1">1</div>
+            <div class="button" id="no2">2</div>
+            <div class="button" id="no3">3</div>
+        </div>
+    </div>
+    <script>
+        function getId(v) {
+            var v = document.getElementById(v);
+            return v;
+        }
+        var picall = document.getElementsByClassName("picall"),
+            pic = document.getElementsByClassName("pic"),
+            button = document.getElementsByClassName("button");
+        console.log(getId("no1"));
+    </script>
+</body>
